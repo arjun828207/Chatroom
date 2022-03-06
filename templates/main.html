@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+    <title>chatroom</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% if messages %}
+    <li class="messages">
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% block content %}
+   
+    {% endblock content %}
+
+</body>
+</html>
